@@ -2,6 +2,7 @@
 #include "util.h"
 #include <WiFi.h>
 #include "volumioRest.h"
+#include "sign.h"
 
 
 //Provide your own WiFi credentials
@@ -14,6 +15,7 @@ String response = "";
 
 Util *util;
 VolumioRest *volRest;
+Sign *sign;
 bool pinOn = false;
 
 // put function declarations here:
@@ -24,6 +26,7 @@ void setup() {
   Serial.begin(9600);
   util = new Util();
   volRest = new VolumioRest();
+  sign = new Sign();
   pinMode(2,OUTPUT);
   //Initiate WiFi connection
   WiFi.mode(WIFI_STA);
