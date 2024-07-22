@@ -21,7 +21,7 @@
 
 
 const uint16_t colors[] = {
-     matrixx.Color(14, 123, 247), matrixx.Color(242, 19, 78), matrixx.Color(255, 255, 255) }; 
+     matrixx.Color(249, 88, 8), matrixx.Color(249, 169, 8), matrixx.Color(249, 8, 8) }; 
 
 
 class Sign{
