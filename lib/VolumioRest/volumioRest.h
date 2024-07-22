@@ -11,6 +11,7 @@ class VolumioRest{
     public:
         VolumioRest(); 
         String get(String str);
+        int getDuration();
 
 
     private:
@@ -19,6 +20,7 @@ class VolumioRest{
         StaticJsonDocument<2048> doc;
         //String for storing server response
         String response = "";
+        int duration = 0;
 };
 
 #endif

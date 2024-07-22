@@ -10,24 +10,28 @@
  #define PSTR // Make Arduino Due happy
 #endif
 
-#define PIN 6
+#define PIN 5
 
- static Adafruit_NeoMatrix matrixx = Adafruit_NeoMatrix(5, 8, PIN,
-  NEO_MATRIX_TOP     + NEO_MATRIX_RIGHT +
-  NEO_MATRIX_COLUMNS + NEO_MATRIX_PROGRESSIVE,
+ static Adafruit_NeoMatrix matrixx = Adafruit_NeoMatrix(55, 10, PIN,
+  NEO_MATRIX_TOP     + NEO_MATRIX_LEFT +
+  NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG,
   NEO_GRB            + NEO_KHZ800);
 
 
+
+
 const uint16_t colors[] = {
-     matrixx.Color(255, 0, 0), matrixx.Color(0, 255, 0), matrixx.Color(0, 0, 255) }; 
+     matrixx.Color(14, 123, 247), matrixx.Color(242, 19, 78), matrixx.Color(255, 255, 255) }; 
 
 
 class Sign{
     public:
         Sign();
-        void display(String str);
+        void display(String str, int length);
 
     private:
+      int xxxx = 0;
+        int piss = 0;
 };
 
 #endif

@@ -7,20 +7,27 @@
 
 
 Sign::Sign(){
+  matrixx.begin();
+  matrixx.setTextWrap(false);
+  matrixx.setBrightness(40);
+  matrixx.setTextColor(colors[0]);
+  xxxx  = matrixx.width();
 
 }
 
-void Sign::display(String str){
-int x    = matrixx.width();
-int pass = 0;
+void Sign::display(String str, int length){
+  //length = (length+5)* -1;
+  //Serial.println(length);
+  
 
-    matrixx.setCursor(x, 0);
-    //matrixx.print(F("Howdy"));
+  matrixx.fillScreen(0);
+  matrixx.setCursor(xxxx, 0);
     matrixx.print(str);
-    if(--x < -36) {
-        x = matrixx.width();
-        if(++pass >= 3) pass = 0;
-        matrixx.setTextColor(colors[pass]);
+    //matrixx.print(str);
+    if(--xxxx < length ) {
+        xxxx = matrixx.width();
+        if(++piss >= 3) piss = 0;
+        matrixx.setTextColor(colors[piss]);
     }
   matrixx.show();
 }

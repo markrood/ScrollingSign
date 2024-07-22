@@ -9,6 +9,7 @@ class Util{
         Util(); 
         int getKey(String str);
         int alphabitPos(String str);
+        String buildDisplayString(int key);
 
     private:
 };
