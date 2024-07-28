@@ -12,7 +12,7 @@
 
 #define PIN 5
 
- static Adafruit_NeoMatrix matrixx = Adafruit_NeoMatrix(55, 10, PIN,
+ static Adafruit_NeoMatrix matrixx = Adafruit_NeoMatrix(54, 10, PIN,
   NEO_MATRIX_TOP     + NEO_MATRIX_LEFT +
   NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG,
   NEO_GRB            + NEO_KHZ800);
